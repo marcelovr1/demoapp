@@ -1,4 +1,7 @@
 Demoapp::Application.routes.draw do
+  resources :twits
+
+
   resources :users
 
 

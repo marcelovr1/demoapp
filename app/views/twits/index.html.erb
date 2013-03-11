@@ -1,0 +1,25 @@
+<h1>Listing twits</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @twits.each do |twit| %>
+  <tr>
+    <td><%= twit.content %></td>
+    <td><%= twit.user_id %></td>
+    <td><%= link_to 'Show', twit %></td>
+    <td><%= link_to 'Edit', edit_twit_path(twit) %></td>
+    <td><%= link_to 'Destroy', twit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Twit', new_twit_path %>
